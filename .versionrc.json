@@ -1,0 +1,7 @@
+{
+  "skip": {
+    "tag": true
+  },
+  "NAME": "Cedar",
+  "VERSION": "0.1.0"
+}
