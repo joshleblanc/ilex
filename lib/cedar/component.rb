@@ -32,9 +32,13 @@ module Cedar
       if const_defined?(name)
         const_get(name)
       else
-        raise(NameError, "with #{name} on receiver: #{self}", name, self) unless superclass.respond_to?(:find_component)
+        if superclass.respond_to?(:find_component)
+          superclass.find_component(name)
+        else
+          adjusted_name = name.chomp("Component").underscore
+          raise(NameError, "undefined local variable or method `#{adjusted_name}` for #{self}")
+        end
 
-        superclass.find_component(name)
       end
     end
   end
