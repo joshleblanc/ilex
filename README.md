@@ -88,3 +88,24 @@ class FoobarComponent < ApplicationComponent
   end
 end
 ```
+
+## ActionView helpers
+
+If you need to access the underlying rails helpers instead of the arbre helpers, use the `helpers` object.
+For example, if you were making a compatible wrapper around `label`:
+
+```ruby
+class LabelComponenent < ApplicationComponent
+  def initialize(object_name, method, text = nil, options = {})
+    @object_name = object_name
+    @method = method
+    @text = text
+    @options = options
+    @options[:class] ||= "label"
+  end
+
+  render do
+    helpers.label @object_name, @method, @text, @options
+  end
+end
+```
