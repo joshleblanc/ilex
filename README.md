@@ -40,7 +40,7 @@ end
 class FoobarComponent < ApplicationComponent
   render do
     div do
-      p "Wow this is kind of neat"
+      para "Wow this is kind of neat"
     end
   end
 end
@@ -62,7 +62,7 @@ class FoobarComponent < ApplicationComponent
 
   render do
     div do
-      p "We're going to render our cool button below"
+      para "We're going to render our cool button below"
       my_cool_button label: "Click me!"
     end
   end
