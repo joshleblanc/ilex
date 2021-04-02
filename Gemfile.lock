@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cedar (0.1.0)
+    cedar (0.1.1)
       arbre
 
 GEM
