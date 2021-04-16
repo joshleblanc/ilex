@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cedar-component (0.1.2)
+    ilex (0.1.2)
       arbre
 
 GEM
@@ -165,7 +165,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  cedar-component!
+  ilex!
   rails
   rubocop (~> 0.80)
   sqlite3

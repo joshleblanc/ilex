@@ -1,7 +1,7 @@
 require_relative "test_helper"
 
 class TestComponent < ViewComponent::Base
-  extend Cedar::Component
+  extend Ilex::Component
 
   render do
     div "Hello!"

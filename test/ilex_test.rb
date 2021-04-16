@@ -2,8 +2,8 @@
 
 require "test_helper"
 
-class CedarTest < Minitest::Test
+class IlexTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Cedar::VERSION
+    refute_nil ::Ilex::VERSION
   end
 end

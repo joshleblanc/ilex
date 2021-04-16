@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Cedar
+module Ilex
   ##
   # A ComponentWarden is responsible for locating potential components
   # given a snake_case representation of that component.

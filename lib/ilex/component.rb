@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Cedar
+module Ilex
 
   ##
   # InlineRender provides a `render` dsl to your components

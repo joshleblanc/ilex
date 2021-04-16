@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in cedar.gemspec
+# Specify your gem's dependencies in ilex.gemspec
 gemspec
 
 gem "rails"

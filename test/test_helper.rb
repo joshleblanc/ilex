@@ -3,11 +3,10 @@
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
-require "cedar"
+require "ilex"
 require "minitest/autorun"
 require "view_component/engine"
 require "view_component/test_case"
-require "cedar"
 
 require_relative "../test/dummy/config/environment"
 ActiveRecord::Migrator.migrations_paths = [File.expand_path("../test/dummy/db/migrate", __dir__)]

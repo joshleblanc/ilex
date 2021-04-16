@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Cedar
+module Ilex
   ##
   # Inject a component's instance variables into arbre's default context
   # as well as provide implicit handling of snake-cased component names as

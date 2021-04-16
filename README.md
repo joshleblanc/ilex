@@ -1,14 +1,14 @@
-# Cedar
+# Ilex
 
-Cedar allows you to render view_component without a sidecar template. It leverages ActiveAdmin's arbre to provide a pure ruby DSL for creating markup. 
-In addition Cedar provides convenience methods for rendering components and component collections.
+Ilex allows you to render view_component without a sidecar template. It leverages ActiveAdmin's arbre to provide a pure ruby DSL for creating markup. 
+In addition Ilex provides convenience methods for rendering components and component collections.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cedar-component'
+gem 'ilex'
 ```
 
 And then execute:
@@ -17,20 +17,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install cedar
+    $ gem install ilex
 
 ## Usage
 
-To use Cedar, you need to extend your components with `Cedar::Component`. The most straight forward way to do this is right
+To use Ilex, you need to extend your components with `Ilex::Component`. The most straight forward way to do this is right
 in your base `ApplicationComponent` class.
 
 ```ruby
 class ApplicationComponent < ViewComponent::Base
-  extend Cedar::Component
+  extend Ilex::Component
 end
 ```
 
-`Cedar` provides 3 key pieces of functionality:
+`Ilex` provides 3 key pieces of functionality:
 
 # Rendering an arbre tree
 

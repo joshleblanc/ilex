@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Cedar
+module Ilex
   ##
   # Thin wrapper around a hash of component wardens
   # such that the default is always an instance of ComponentWarden
