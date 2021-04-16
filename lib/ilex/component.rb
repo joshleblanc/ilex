@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ilex
+module Cedar
 
   ##
   # InlineRender provides a `render` dsl to your components
@@ -19,8 +19,6 @@ module Ilex
   module Component
     include Arbre::HTML
 
-    # The empty first arg is just to trick rubymine
-    # when using `render` inside the arbre context
     def render(&blk)
       define_method :call do
         ctx = Context.new(self)
