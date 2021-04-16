@@ -20,6 +20,10 @@ module Ilex
       end
     end
 
+    def content
+      @component.send :content
+    end
+
     def respond_to_missing?(method, include_all)
       @component.respond_to?(method) || @component_wardens[method].exists? || super
     end
