@@ -3,7 +3,7 @@
 require_relative "lib/cedar/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "cedar"
+  spec.name          = "cedar-component"
   spec.version       = Cedar::VERSION
   spec.authors       = ["Joshua LeBlanc"]
   spec.email         = ["jleblanc@hey.com"]

@@ -8,7 +8,7 @@ In addition Cedar provides convenience methods for rendering components and comp
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cedar'
+gem 'cedar-component'
 ```
 
 And then execute:
