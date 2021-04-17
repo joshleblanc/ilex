@@ -13,7 +13,7 @@ module Ilex
       @raw_input = string
 
       @collection = @raw_input.end_with? "_collection"
-      @input = @raw_input.to_s.chomp("_collection")
+      @input = @raw_input.to_s.chomp("_collection").chomp("_component")
     end
 
     def collection?
