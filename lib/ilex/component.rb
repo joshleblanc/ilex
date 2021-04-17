@@ -19,7 +19,7 @@ module Ilex
   module Component
     include Arbre::HTML
 
-    def render(&blk)
+    def render(*args, &blk)
       define_method :call do
         ctx = Context.new(self)
         ctx.instance_eval(&blk).to_s
