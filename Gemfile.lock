@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ilex (0.1.4)
+    ilex (0.1.5)
       arbre
 
 GEM
