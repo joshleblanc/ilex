@@ -42,9 +42,9 @@ module Ilex
       return nil unless exists?
 
       if collection?
-        component_class.with_collection(*args, &block)
+        component_class.with_collection(*args)
       else
-        component_class.new(*args, &block)
+        component_class.new(*args)
       end
     end
 

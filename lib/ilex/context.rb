@@ -49,7 +49,7 @@ module Ilex
       if @component.respond_to?(method)
         @component.send(method, *args, &content_block)
       elsif @component_wardens[method].exists?
-        render @component_wardens[method].new(*args, &content_block)
+        render @component_wardens[method].new(*args), &content_block
       else
         super
       end
