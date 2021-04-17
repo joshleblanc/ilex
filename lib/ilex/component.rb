@@ -26,12 +26,18 @@ module Ilex
       end
     end
 
-    def find_component(name)
-      if const_defined?(name)
-        const_get(name)
+    def find_component(name, base_module = nil)
+      target = if base_module
+        base_module
       else
-        if superclass.respond_to?(:find_component)
-          superclass.find_component(name)
+        self
+      end
+
+      if target.const_defined?(name)
+        target.const_get(name)
+      else
+        if target.superclass.respond_to?(:find_component)
+          target.superclass.find_component(name)
         else
           adjusted_name = name.chomp("Component").underscore
           raise(NameError, "undefined local variable or method `#{adjusted_name}` for #{self}")

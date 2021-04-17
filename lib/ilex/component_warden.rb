@@ -10,14 +10,20 @@ module Ilex
   class ComponentWarden
     def initialize(component, string)
       @component = component
-      @raw_input = string
+      @input = string.to_s
 
-      @collection = @raw_input.end_with? "_collection"
-      @input = @raw_input.to_s.chomp("_collection").chomp("_component")
+      @collection = @input.end_with? "_collection"
+      @nested = @input.include? "__"
+
+      process_input!(@input)
     end
 
     def collection?
       @collection
+    end
+
+    def nested?
+      @nested
     end
 
     def component_name
@@ -25,7 +31,7 @@ module Ilex
     end
 
     def component_class
-      @component_class ||= @component.class.find_component(component_name)
+      @component_class ||= @component.class.find_component(component_name, @base_module)
     end
 
     def exists?
@@ -39,6 +45,20 @@ module Ilex
         component_class.with_collection(*args, &block)
       else
         component_class.new(*args, &block)
+      end
+    end
+
+    private
+
+    def process_input!(input)
+      @input.chomp! "_collection"
+      @input.chomp! "_component"
+
+      if nested?
+        parts = @input.split("__")
+        @input = parts.pop
+
+        @base_module = parts.map(&:camelize).join("::").constantize
       end
     end
   end
