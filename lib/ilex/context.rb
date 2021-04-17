@@ -24,6 +24,23 @@ module Ilex
       @component.send :content
     end
 
+    # This is overriding arbre::rails::rendering
+    # It performs the same actions, but returns html_safe on a passed block
+    #
+    # Not 100% sure this is needed, but view_components won't render their
+    # contents without it, when rendered in an arbre tree
+    def render(*args)
+      rendered = helpers.render(*args) do
+        yield.html_safe if block_given?
+      end
+      case rendered
+      when Arbre::Context
+        current_arbre_element.add_child rendered
+      else
+        text_node rendered
+      end
+    end
+
     def respond_to_missing?(method, include_all)
       @component.respond_to?(method) || @component_wardens[method].exists? || super
     end
