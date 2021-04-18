@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/joshleblanc/cedar/compare/v0.1.5...v0.1.6) (2021-04-18)
+
+
+### Bug Fixes
+
+* allow rendering form helpers with blocks ([9a24ed7](https://github.com/joshleblanc/cedar/commit/9a24ed7388c60f7a7ed4398dc4871974302c87f3)), closes [activeadmin/arbre#64](https://github.com/activeadmin/arbre/issues/64)
+
 ### [0.1.5](https://github.com/joshleblanc/cedar/compare/v0.1.4...v0.1.5) (2021-04-17)
 
 
