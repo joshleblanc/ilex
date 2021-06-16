@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/joshleblanc/ilex/compare/v0.1.6...v0.1.7) (2021-06-16)
+
+
+### Bug Fixes
+
+* try and convert component arrays into strings ([13e0438](https://github.com/joshleblanc/ilex/commit/13e0438d1da6ebd0bc0b46c9ca7cc6828bd99a7f))
+
 ### [0.1.6](https://github.com/joshleblanc/cedar/compare/v0.1.5...v0.1.6) (2021-04-18)
 
 
