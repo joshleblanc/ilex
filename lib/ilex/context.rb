@@ -35,7 +35,14 @@ module Ilex
     # contents without it, when rendered in an arbre tree
     def render(*args)
       rendered = helpers.render(*args) do
-        yield.html_safe if block_given?
+        if block_given?
+          contents = yield
+          if contents.is_a? Array
+            contents.join.html_safe
+          else
+            contents.html_safe
+          end
+        end
       end
       case rendered
       when Arbre::Context
