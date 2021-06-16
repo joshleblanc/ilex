@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/joshleblanc/ilex/compare/v0.1.7...v0.1.8) (2021-06-16)
+
+
+### Bug Fixes
+
+* handle rendering arrays ([fd09349](https://github.com/joshleblanc/ilex/commit/fd093493a790ada7403acfa8cf2496783cdfbfce))
+* handle root level slot text nodes ([6913197](https://github.com/joshleblanc/ilex/commit/6913197ab4286115734bbbbb4b2fc1c01f286d84))
+
 ### [0.1.7](https://github.com/joshleblanc/ilex/compare/v0.1.6...v0.1.7) (2021-06-16)
 
 
