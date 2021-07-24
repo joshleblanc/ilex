@@ -21,8 +21,8 @@ module Ilex
 
     def render(*args, &blk)
       define_method :call do
-        ctx = Context.new(self)
-        ctx.instance_eval(&blk).to_s
+        @ctx = Context.new(self)
+        @ctx.instance_eval(&blk).html_safe
       end
     end
 
@@ -42,7 +42,6 @@ module Ilex
           adjusted_name = name.chomp("Component").underscore
           raise(NameError, "undefined local variable or method `#{adjusted_name}` for #{self}")
         end
-
       end
     end
   end
