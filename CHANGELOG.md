@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/joshleblanc/ilex/compare/v0.1.8...v0.1.9) (2021-07-24)
+
+
+### Bug Fixes
+
+* when block returns an arbre element, render context ([e3eda72](https://github.com/joshleblanc/ilex/commit/e3eda728fd30bcb15ebb3f5234229b644bbcf59a))
+
 ### [0.1.8](https://github.com/joshleblanc/ilex/compare/v0.1.7...v0.1.8) (2021-06-16)
 
 
